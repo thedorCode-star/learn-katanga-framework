@@ -23,4 +23,18 @@ class GameRunnerTest {
 		assertThat(output).contains("Running game:");
 	}
 
+	@Test
+	void runPrintsAllGameActions(CapturedOutput output) {
+		var marioGame = new MarioGame();
+		var gameRunner = new GameRunner(marioGame);
+
+		gameRunner.run();
+
+		assertThat(output)
+				.contains("Jump")
+				.contains("Crouch")
+				.contains("Move left")
+				.contains("Move right");
+	}
+
 }
