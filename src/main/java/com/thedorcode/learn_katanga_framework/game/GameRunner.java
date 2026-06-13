@@ -9,7 +9,10 @@ public class GameRunner {
 
 	public void run() {
 		System.out.println("Running game: " + _game);
-		
+		_game.up();
+		_game.down();
+		_game.left();
+		_game.right();
 	}
 
 }
