@@ -13,8 +13,8 @@ class GameRunnerTest {
 	@Test
 	void runPrintsRunningGameMessage(CapturedOutput output) {
 		// Arrange
-		var marioGame = new MarioGame();
-		var gameRunner = new GameRunner(marioGame);
+		var superContraGame = new SuperContraGame();
+		var gameRunner = new GameRunner(superContraGame);
 
 		// Act
 		gameRunner.run();
@@ -25,16 +25,16 @@ class GameRunnerTest {
 
 	@Test
 	void runPrintsAllGameActions(CapturedOutput output) {
-		var marioGame = new MarioGame();
-		var gameRunner = new GameRunner(marioGame);
+		var superContraGame = new SuperContraGame();
+		var gameRunner = new GameRunner(superContraGame);
 
 		gameRunner.run();
 
 		assertThat(output)
-				.contains("Jump")
-				.contains("Crouch")
-				.contains("Move left")
-				.contains("Move right");
+				.contains("up super contra")
+				.contains("down super contra")
+				.contains("left super contra")
+				.contains("shoot a bullet super contra");
 	}
 
 }

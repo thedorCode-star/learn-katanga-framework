@@ -1,9 +1,10 @@
 package com.thedorcode.learn_katanga_framework.game;
 
 public class GameRunner {
-	MarioGame _game;
+
+	private GamingConsole _game;
 	
-	public GameRunner(MarioGame game) {
+	public GameRunner(GamingConsole game) {
 		_game = game;
 	}
 

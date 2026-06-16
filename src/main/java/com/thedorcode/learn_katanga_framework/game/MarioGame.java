@@ -1,6 +1,7 @@
 package com.thedorcode.learn_katanga_framework.game;
 
-public class MarioGame {
+public class MarioGame implements GamingConsole {
+	
     public void up() {
         System.out.println("Jump");
     }
