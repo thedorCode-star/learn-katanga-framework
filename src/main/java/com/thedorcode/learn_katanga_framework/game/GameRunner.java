@@ -8,7 +8,11 @@ public class GameRunner {
 		_game = game;
 	}
 
-	public void run() {
+	public GameRunner(MarioGame game) {
+        //TODO Auto-generated constructor stub
+    }
+
+    public void run() {
 		System.out.println("Running game: " + _game);
 		_game.up();
 		_game.down();
